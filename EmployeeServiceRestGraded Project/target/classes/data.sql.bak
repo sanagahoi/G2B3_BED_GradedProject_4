@@ -1,0 +1,31 @@
+
+-- Clean up
+delete from users_roles;
+
+delete from roles;
+
+delete from users;
+
+
+-- Insert Data
+
+insert into roles (role_id,name) values (1,'ADMIN');
+
+
+insert into users (user_id,password,username) values 
+(1,'$2a$12$gdAH7MiJryHplsiAwzFVdO.gKSKWetp.3RyoMV6jrnRyCZj.FiyJ6','admin');
+
+insert into users_roles (user_id,role_id) values (1,1);
+
+-- Employees
+
+delete from employee;
+
+insert into employee (id, email, first_name, last_name) values (1, 'employee.1@gmail.com', '1-First Name', '1-Last Name');
+
+insert into employee (id, email, first_name, last_name) values (2, 'employee.2@gmail.com', '2-First Name', '2-Last Name');
+
+insert into employee (id, email, first_name, last_name) values (3, 'employee.3@gmail.com', '3-First Name', '3-Last Name');
+
+insert into employee (id, email, first_name, last_name) values (4, 'employee.4@gmail.com', '4-First Name', '4-Last Name');
+
